@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: user-management
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: password
+    ports:
+      - "3307:3306"
+    networks:
+      - user-management-network
+
+networks:
+  user-management-network:
+    name: user-management-network
+    driver: bridge
