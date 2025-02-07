@@ -21,6 +21,7 @@ cd user-management-api
 Run the following command to restore all dependencies for the project:
 ```bash
 dotnet restore
+cd docker && docker-compose up
 ```
 
 #### 3. Apply Migrations
@@ -40,7 +41,7 @@ Now, you can run the API using the following command:
 ```bash
 dotnet run
 ```
-The API will be available at http://localhost:5000 (or another port if specified).
+The API will be available at http://localhost:5113.
 
 
 ### API Endpoints
